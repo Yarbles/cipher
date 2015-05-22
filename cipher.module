@@ -2,11 +2,11 @@
 
 function cipher_menu() {
   $items['cipher'] = array (
-  'title' => 'Cipher',
-  'page callback' => 'drupal_get_form',
-  'page arguments' => array('cipher_form'),
-  'access callback' => TRUE,
-  'type' = MENU_NORMAL_ITEM,
+    'title' => 'Cipher',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cipher_form'),
+    'access callback' => TRUE,
+    'type' = MENU_NORMAL_ITEM,
   );
 
   $items['success'] = array(
@@ -28,16 +28,16 @@ function cipher_form() {
     '#required' => TRUE,
   );
 
-  $form['shift_direction'] = array(
-    '#title' => 'Shift direction',
-    '#type' => 'select',
-    '#description' => t('Select which direction the cipher will move in the alphabet'),
-    '#options' => array(
-      'left' => t('Left'),
-      'right' => t('Right'),
-    ),
-    '#required' => TRUE,
-  );
+  // $form['shift_direction'] = array(
+  //   '#title' => 'Shift direction',
+  //   '#type' => 'select',
+  //   '#description' => t('Select which direction the cipher will move in the alphabet'),
+  //   '#options' => array(
+  //     'left' => t('Left'),
+  //     'right' => t('Right'),
+  //   ),
+  //   '#required' => TRUE,
+  // );
 
   $form['phrase'] = array(
     '#title' => 'Phrase',
@@ -48,13 +48,9 @@ function cipher_form() {
   );
 
   $form['submit'] = array(
-        '#type' => 'submit',
-        '#value' => 'Go',
+    '#type' => 'submit',
+    '#value' => 'Go',
   );
 
   return $form;
 }
-//
-// function element_validate_input_range($element) {
-//   if($element[''])
-// }
