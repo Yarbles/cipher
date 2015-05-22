@@ -10,8 +10,8 @@ function cipher_menu() {
   );
 
   $items['success'] = array(
-    'title' => 'Done',
-    'page callback' => 'cipher_done',
+    'title' => 'Success',
+    'page callback' => 'cipher_success',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
@@ -53,4 +53,18 @@ function cipher_form() {
   );
 
   return $form;
+}
+
+function cipher_form_submit($form, &$form_state) {
+  $form_state['redirect'] = 'success';
+}
+
+function cipher_success() {
+  return "Hooray!";
+}
+
+function element_validate_input_range($element) {
+  if (strpos($element, '1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0'||'#'||'@'||'$'||'%'||'^'||'&'||'*'||'('||')'||'-'||'+'||'='||'{')) {
+    form_error($element, t("Please don't use special characters besides punctuation in your cipher"));
+  }
 }
