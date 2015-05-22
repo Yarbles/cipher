@@ -24,7 +24,7 @@ function cipher_form() {
     '#title' => 'Shift value',
     '#type' => 'textfield',
     '#description' => t('Enter the number of letters you would like the cipher to shift'),
-    '#element_validate' => array('element_validate_integer_positive'),
+    // '#element_validate' => array('element_validate_integer_positive'),
     '#required' => TRUE,
   );
 
