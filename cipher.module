@@ -64,7 +64,8 @@ function cipher_success() {
 }
 
 function element_validate_input_range($element) {
-  if (strpos($element, '1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0'||'#'||'@'||'$'||'%'||'^'||'&'||'*'||'('||')'||'-'||'+'||'='||'{')) {
+  str_split($element) = $phrase_array;
+  if (strpos($phrase_array, '1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0'||'#'||'@'||'$'||'%'||'^'||'&'||'*'||'('||')'||'-'||'+'||'='||'{')) {
     form_error($element, t("Please don't use special characters besides punctuation in your cipher"));
   }
 }
