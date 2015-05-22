@@ -18,3 +18,32 @@ function cipher_menu() {
 
   return $items;
 }
+
+function cipher_form() {
+  $form[shift_value] = array(
+    '#title' => 'Shift value',
+    '#type' => 'textfield',
+    '#description' => t('Enter the number of letters you would like the cipher to shift'),
+    '#element_validate' => array('element_validate_integer_positive'),
+    '#required' => TRUE,
+  );
+}
+
+  $form[shift_direction] = array(
+    '#title' => 'Shift direction',
+    '#type' => 'select',
+    '#description' => t('Select which direction the cipher will move in the alphabet'),
+    '#options' => array(
+      'left' => t('Left'),
+      'right' => t('Right'),
+    ),
+    '#required' => TRUE,
+  );
+
+  $form[phrase] = array(
+    '#title' => 'Phrase',
+    '#type' => 'textfield',
+    '#description' => t('Enter the phrase you would like to cipher'),
+    '#element_validate' => array('element_validate_punctuation'),
+    '#required' => TRUE,
+  );
