@@ -20,7 +20,7 @@ function cipher_menu() {
 }
 
 function cipher_form() {
-  $form[shift_value] = array(
+  $form['shift_value'] = array(
     '#title' => 'Shift value',
     '#type' => 'textfield',
     '#description' => t('Enter the number of letters you would like the cipher to shift'),
@@ -28,7 +28,7 @@ function cipher_form() {
     '#required' => TRUE,
   );
 
-  $form[shift_direction] = array(
+  $form['shift_direction'] = array(
     '#title' => 'Shift direction',
     '#type' => 'select',
     '#description' => t('Select which direction the cipher will move in the alphabet'),
@@ -39,7 +39,7 @@ function cipher_form() {
     '#required' => TRUE,
   );
 
-  $form[phrase] = array(
+  $form['phrase'] = array(
     '#title' => 'Phrase',
     '#type' => 'textfield',
     '#description' => t('Enter the phrase you would like to cipher'),
@@ -51,4 +51,8 @@ function cipher_form() {
         '#type' => 'submit',
         '#value' => 'Go',
   );
-}  
+}
+//
+// function element_validate_input_range($element) {
+//   if($element[''])
+// }
