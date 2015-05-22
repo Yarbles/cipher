@@ -51,6 +51,8 @@ function cipher_form() {
         '#type' => 'submit',
         '#value' => 'Go',
   );
+
+  return $form;
 }
 //
 // function element_validate_input_range($element) {
