@@ -1,0 +1,5 @@
+name = Cipher
+description = encrypts user input into Caesar cipher
+package = Epicodus Assessments
+core = 7.x
+files[] = cipher.module
