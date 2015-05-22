@@ -6,7 +6,7 @@ function cipher_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('cipher_form'),
     'access callback' => TRUE,
-    'type' = MENU_NORMAL_ITEM,
+    'type' => MENU_NORMAL_ITEM,
   );
 
   $items['success'] = array(
