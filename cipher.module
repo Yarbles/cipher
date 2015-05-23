@@ -55,17 +55,18 @@ function cipher_form() {
   return $form;
 }
 
+function element_validate_input_range($element) {
+  $array = ['1','2','3','4','5','6','7','8','9','0','#','@','$','%','^','&','*','(',')','-','+','=','{'];
+  if (in_array($element['#value'], $array)) {
+    form_error($element, t("Please don't use special characters besides punctuation in your cipher"));
+  }
+}
+
+
 function cipher_form_submit($form, &$form_state) {
   $form_state['redirect'] = 'success';
 }
 
 function cipher_success() {
   return "Hooray!";
-}
-
-function element_validate_input_range($element) {
-  $array = ['1','2','3','4','5','6','7','8','9','0','#','@','$','%','^','&','*','(',')','-','+','=','{'];
-  if (in_array($element['#value'], $array)) {
-    form_error($element, t("Please don't use special characters besides punctuation in your cipher"));
-  }
 }
